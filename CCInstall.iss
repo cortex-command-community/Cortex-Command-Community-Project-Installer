@@ -43,3 +43,11 @@ Name: data;                  Description: Install game data;                    
 Name: dependencies;          Description: Install dependencies;                                      Types: full;
 Name: dependencies/vcredist; Description: Install Visual C++ Redistributable;                        Types: full compact;
 Name: dependencies/vigembus; Description: Install ViGEm Bus Driver (DualShock 4 controller support); Types: full;
+
+[Files]    
+; Source: "{#SourcePath}\License.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#SourcePath}\Data\*";      DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Excludes: "Place all game data and binaries here,.gitignore,_ScreenShots,Base.rte\Settings.ini,Benchmark.rte,AbortScreen.bmp,LogConsole.txt,LogLoading.txt,LogLoadingWarning.txt,MemCleanupInfo.txt,allegro.log";
+
+Source: "{#SourcePath}\Dependencies\VC_redist.x86.exe";           DestDir: "{tmp}"; Flags: ignoreversion deleteafterinstall; Components: dependencies/vcredist;
+Source: "{#SourcePath}\Dependencies\VC_redist.x64.exe";           DestDir: "{tmp}"; Flags: ignoreversion deleteafterinstall; Components: dependencies/vcredist;
+Source: "{#SourcePath}\Dependencies\ViGEmBus_Setup_1.16.116.exe"; DestDir: "{tmp}"; Flags: ignoreversion deleteafterinstall; Components: dependencies/vigembus;
