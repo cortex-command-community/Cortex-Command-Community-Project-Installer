@@ -44,6 +44,9 @@ Name: dependencies;          Description: Install dependencies;                 
 Name: dependencies/vcredist; Description: Install Visual C++ Redistributable;                        Types: full compact;
 Name: dependencies/vigembus; Description: Install ViGEm Bus Driver (DualShock 4 controller support); Types: full;
 
+[Tasks]
+Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked;
+
 [Files]    
 ; Source: "{#SourcePath}\License.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#SourcePath}\Data\*";      DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Excludes: "Place all game data and binaries here,.gitignore,_ScreenShots,Base.rte\Settings.ini,Benchmark.rte,AbortScreen.bmp,LogConsole.txt,LogLoading.txt,LogLoadingWarning.txt,MemCleanupInfo.txt,allegro.log";
@@ -51,3 +54,9 @@ Source: "{#SourcePath}\Data\*";      DestDir: "{app}"; Flags: ignoreversion recu
 Source: "{#SourcePath}\Dependencies\VC_redist.x86.exe";           DestDir: "{tmp}"; Flags: ignoreversion deleteafterinstall; Components: dependencies/vcredist;
 Source: "{#SourcePath}\Dependencies\VC_redist.x64.exe";           DestDir: "{tmp}"; Flags: ignoreversion deleteafterinstall; Components: dependencies/vcredist;
 Source: "{#SourcePath}\Dependencies\ViGEmBus_Setup_1.16.116.exe"; DestDir: "{tmp}"; Flags: ignoreversion deleteafterinstall; Components: dependencies/vigembus;
+
+[Icons]
+Name: "{group}\Launch Cortex Command";       Filename: "{app}\{#AppExeName32}";
+Name: "{group}\Launch Cortex Command (x64)"; Filename: "{app}\{#AppExeName64}";
+Name: "{group}\Uninstall Cortex Command";    FileName: "{uninstallexe}";
+Name: "{autodesktop}\Cortex Command";        Filename: "{app}\{#AppExeName32}";  Tasks: desktopicon;
