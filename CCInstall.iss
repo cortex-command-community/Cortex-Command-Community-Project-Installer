@@ -37,3 +37,9 @@ PrivilegesRequiredOverridesAllowed=dialog
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
+
+[Components]
+Name: data;                  Description: Install game data;                                         Types: full compact custom; Flags: fixed
+Name: dependencies;          Description: Install dependencies;                                      Types: full;
+Name: dependencies/vcredist; Description: Install Visual C++ Redistributable;                        Types: full compact;
+Name: dependencies/vigembus; Description: Install ViGEm Bus Driver (DualShock 4 controller support); Types: full;
