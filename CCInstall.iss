@@ -60,3 +60,10 @@ Name: "{group}\Launch Cortex Command";       Filename: "{app}\{#AppExeName32}";
 Name: "{group}\Launch Cortex Command (x64)"; Filename: "{app}\{#AppExeName64}";
 Name: "{group}\Uninstall Cortex Command";    FileName: "{uninstallexe}";
 Name: "{autodesktop}\Cortex Command";        Filename: "{app}\{#AppExeName32}";  Tasks: desktopicon;
+
+[Run]
+Filename: "{tmp}\VC_redist.x86.exe";           Components: dependencies/vcredist;
+Filename: "{tmp}\VC_redist.x64.exe";           Components: dependencies/vcredist;
+Filename: "{tmp}\ViGEmBus_Setup_1.16.116.exe"; Components: dependencies/vigembus;
+
+Filename: "{app}\{#AppExeName32}"; Description: "{cm:LaunchProgram,{#StringChange(AppName, '&', '&&')}}"; Flags: unchecked nowait postinstall;
