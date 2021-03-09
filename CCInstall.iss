@@ -52,18 +52,18 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Source: "{#SourcePath}\Data\*";      DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Excludes: "Place all game data and binaries here,.gitignore,_ScreenShots,Base.rte\Settings.ini,Benchmark.rte,AbortScreen.bmp,LogConsole.txt,LogLoading.txt,LogLoadingWarning.txt,MemCleanupInfo.txt,allegro.log";
 
 Source: "{#SourcePath}\Dependencies\VC_redist.x86.exe";           DestDir: "{tmp}"; Flags: ignoreversion deleteafterinstall; Components: dependencies/vcredist;
-Source: "{#SourcePath}\Dependencies\VC_redist.x64.exe";           DestDir: "{tmp}"; Flags: ignoreversion deleteafterinstall; Components: dependencies/vcredist;
+; Source: "{#SourcePath}\Dependencies\VC_redist.x64.exe";           DestDir: "{tmp}"; Flags: ignoreversion deleteafterinstall; Components: dependencies/vcredist;
 Source: "{#SourcePath}\Dependencies\ViGEmBus_Setup_1.16.116.exe"; DestDir: "{tmp}"; Flags: ignoreversion deleteafterinstall; Components: dependencies/vigembus;
 
 [Icons]
 Name: "{group}\Launch Cortex Command";       Filename: "{app}\{#AppExeName32}";
-Name: "{group}\Launch Cortex Command (x64)"; Filename: "{app}\{#AppExeName64}";
+; Name: "{group}\Launch Cortex Command (x64)"; Filename: "{app}\{#AppExeName64}";
 Name: "{group}\Uninstall Cortex Command";    FileName: "{uninstallexe}";
 Name: "{autodesktop}\Cortex Command";        Filename: "{app}\{#AppExeName32}";  Tasks: desktopicon;
 
 [Run]
 Filename: "{tmp}\VC_redist.x86.exe";           Components: dependencies/vcredist;
-Filename: "{tmp}\VC_redist.x64.exe";           Components: dependencies/vcredist;
+; Filename: "{tmp}\VC_redist.x64.exe";           Components: dependencies/vcredist;
 Filename: "{tmp}\ViGEmBus_Setup_1.16.116.exe"; Components: dependencies/vigembus;
 
 Filename: "{app}\{#AppExeName32}"; Description: "{cm:LaunchProgram,{#StringChange(AppName, '&', '&&')}}"; Flags: unchecked nowait postinstall;
