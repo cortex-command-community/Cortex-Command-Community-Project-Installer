@@ -1,1 +1,8 @@
-TBA
+Thank you for downloading the Cortex Command Community Project, we hope you enjoy the changes and improvements the community has made.
+
+If you'd like to contribute, report bugs, follow development more closely, or just chat about the game, please join us in Discord - https://discord.gg/TSU6StNQUG
+We've got great plans for the future, and we're always looking for more contributors to help bring Cortex Command to new heights!
+
+Our website also has a bunch of useful links - https://cortex-command-community.github.io
+
+One final, important note - mods from older versions of the game will NOT work with this version. However, there's a Mod Converter packaged with the game that should be able to convert most mods, and we've got a lot of great new and converted mods on our mod portal - https://cccp.mod.io
