@@ -28,8 +28,8 @@ OutputDir={#SourcePath}\_Output
 OutputBaseFilename=Install CCCP {#AppVersion}
 
 ; LicenseFile={#SourcePath}\License.txt
-; InfoBeforeFile={#SourcePath}\InfoPreInstall.txt
-; InfoAfterFile={#SourcePath}\InfoPostInstall.txt
+InfoBeforeFile={#SourcePath}\InfoPreInstall.txt
+InfoAfterFile={#SourcePath}\InfoPostInstall.txt
 
 ; Remove the following line to run in administrative install mode (install for all users.)
 PrivilegesRequired=lowest
