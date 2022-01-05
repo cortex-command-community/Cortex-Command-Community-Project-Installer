@@ -1,5 +1,5 @@
 ;Don't forget to bump version number
-#define AppVersion "PreRelease 3.0"
+#define AppVersion "PreRelease 4.0"
 
 #define AppName "Cortex Command Community Project"
 #define AppPublisher "Cortex Command Community"
