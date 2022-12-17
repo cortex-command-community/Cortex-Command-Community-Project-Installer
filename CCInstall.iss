@@ -73,7 +73,7 @@ Flags: unchecked;
 
 ;////////////////////////////////////////////////////////////////////////////////////////////////
 
-[Files]    
+[Files]
 ;Source: "{#SourcePath}\License.txt";	\
 ;DestDir: "{app}"; Flags: ignoreversion
 
@@ -84,6 +84,9 @@ Excludes: 	"Place all game data and binaries here,		\
 			.gitignore,									\
 			_ScreenShots,								\
 			Base.rte\Settings.ini,						\
+			UserSavedGames.rte,							\
+			UserSavesConquest.rte,						\
+			UserScenes.rte,								\
 			Benchmark.rte,								\
 			AbortScreen.bmp,							\
 			LogConsole.txt,								\
@@ -98,7 +101,7 @@ Flags: ignoreversion deleteafterinstall;					\
 Components: dependencies/vcredist;
 
 ;Source: "{#SourcePath}\Dependencies\VC_redist.x64.exe";	\
-;DestDir: "{tmp}";											\ 
+;DestDir: "{tmp}";											\
 ;Flags: ignoreversion deleteafterinstall;					\
 ;Components: dependencies/vcredist;
 
