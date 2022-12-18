@@ -4,8 +4,7 @@
 #define AppName "Cortex Command Community Project"
 #define AppPublisher "Cortex Command Community"
 #define AppURL "https://github.com/cortex-command-community"
-#define AppExeName32 "Cortex Command.exe"
-#define AppExeName64 "Cortex Command x64.exe"
+#define AppExeName "Cortex Command.exe"
 
 ;////////////////////////////////////////////////
 
@@ -95,15 +94,10 @@ Excludes: 	"Place all game data and binaries here,		\
 			MemCleanupInfo.txt,							\
 			allegro.log";
 
-Source: "{#SourcePath}\Dependencies\VC_redist.x86.exe";		\
+Source: "{#SourcePath}\Dependencies\VC_redist.x64.exe";		\
 DestDir: "{tmp}";											\
 Flags: ignoreversion deleteafterinstall;					\
 Components: dependencies/vcredist;
-
-;Source: "{#SourcePath}\Dependencies\VC_redist.x64.exe";	\
-;DestDir: "{tmp}";											\
-;Flags: ignoreversion deleteafterinstall;					\
-;Components: dependencies/vcredist;
 
 Source: "{#SourcePath}\Dependencies\ViGEmBus_Setup_1.16.116.exe";	\
 DestDir: "{tmp}";													\
@@ -114,34 +108,24 @@ Components: dependencies/vigembus;
 
 [Icons]
 Name: "{group}\Launch Cortex Command";	\
-Filename: "{app}\{#AppExeName32}";
-
-;Name: "{group}\Launch Cortex Command (x64)";	\
-;Filename: "{app}\{#AppExeName64}";
+Filename: "{app}\{#AppExeName}";
 
 Name: "{group}\Uninstall Cortex Command";	\
 FileName: "{uninstallexe}";
 
 Name: "{autodesktop}\Cortex Command";	\
-Filename: "{app}\{#AppExeName32}";	\
+Filename: "{app}\{#AppExeName}";		\
 Tasks: desktopicon;
 
 ;////////////////////////////////////////////////////////////////////////////////////////////////
 
 [Run]
-Filename: "{tmp}\VC_redist.x86.exe";	\
+Filename: "{tmp}\VC_redist.x64.exe";	\
 Components: dependencies/vcredist;
-
-;Filename: "{tmp}\VC_redist.x64.exe";	\
-;Components: dependencies/vcredist;
 
 Filename: "{tmp}\ViGEmBus_Setup_1.16.116.exe";	\
 Components: dependencies/vigembus;
 
-Filename: "{app}\{#AppExeName32}";										\
+Filename: "{app}\{#AppExeName}";										\
 Description: "{cm:LaunchProgram,{#StringChange(AppName, '&', '&&')}}";	\
 Flags: unchecked nowait postinstall;
-
-;////////////////////////////////////////////////////////////////////////////////////////////////
-
-[Code]
