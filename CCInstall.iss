@@ -58,10 +58,6 @@ Name: dependencies/vcredist;						\
 Description: Install Visual C++ Redistributable;	\
 Types: full compact;
 
-Name: dependencies/vigembus;												\
-Description: Install ViGEm Bus Driver (DualShock 4 controller support);		\
-Types: full;
-
 ;////////////////////////////////////////////////////////////////////////////////////////////////
 
 [Tasks]
@@ -99,11 +95,6 @@ DestDir: "{tmp}";											\
 Flags: ignoreversion deleteafterinstall;					\
 Components: dependencies/vcredist;
 
-Source: "{#SourcePath}\Dependencies\ViGEmBus_Setup_1.16.116.exe";	\
-DestDir: "{tmp}";													\
-Flags: ignoreversion deleteafterinstall;							\
-Components: dependencies/vigembus;
-
 ;////////////////////////////////////////////////////////////////////////////////////////////////
 
 [Icons]
@@ -122,9 +113,6 @@ Tasks: desktopicon;
 [Run]
 Filename: "{tmp}\VC_redist.x64.exe";	\
 Components: dependencies/vcredist;
-
-Filename: "{tmp}\ViGEmBus_Setup_1.16.116.exe";	\
-Components: dependencies/vigembus;
 
 Filename: "{app}\{#AppExeName}";										\
 Description: "{cm:LaunchProgram,{#StringChange(AppName, '&', '&&')}}";	\
