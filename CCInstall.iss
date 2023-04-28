@@ -3,7 +3,7 @@
 
 #define AppName "Cortex Command Community Project"
 #define AppPublisher "Cortex Command Community"
-#define AppURL "https://github.com/cortex-command-community"
+#define AppURL "https://cortex-command-community.github.io"
 #define AppExeName "Cortex Command.exe"
 
 ;////////////////////////////////////////////////
