@@ -77,18 +77,23 @@ DestDir: "{app}";										\
 Flags: ignoreversion recursesubdirs createallsubdirs;	\
 Excludes: 	"Place all game data and binaries here,		\
 			.gitignore,									\
-			_ScreenShots,								\
-			Base.rte\Settings.ini,						\
-			UserSavedGames.rte,							\
-			UserSavesConquest.rte,						\
-			UserScenes.rte,								\
-			Benchmark.rte,								\
+			.github,									\
+			ScreenShots,								\
+			Userdata,									\
+			Mods,										\
 			AbortScreen.bmp,							\
+			AbortLog.txt,								\
 			LogConsole.txt,								\
 			LogLoading.txt,								\
 			LogLoadingWarning.txt,						\
 			MemCleanupInfo.txt,							\
-			allegro.log";
+			allegro.log,								\
+			*.bat,										\
+			Cortex Command.debug.full.exe,				\
+			Cortex Command.debug.minimal.exe,			\
+			Cortex Command.debug.release.exe,			\
+			fmodL.dll,									\
+			SDL2-32.dll";
 
 Source: "{#SourcePath}\Dependencies\VC_redist.x64.exe";		\
 DestDir: "{tmp}";											\
