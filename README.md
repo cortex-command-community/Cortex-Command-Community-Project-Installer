@@ -4,10 +4,9 @@ An [Inno Setup 6](https://jrsoftware.org/isinfo.php) project file for compiling 
 
 ## Build Instructions:
 
-1. Place all game data and binaries into the `Data` folder.
-	- The following files/folders will be ignored so it's not necessary to omit them manually:  
-	`.gitignore`, `_ScreenShots`, `Base.rte\Settings.ini`, `UserSavedGames.rte`, `UserSavesConquest.rte`, `UserScenes.rte`, `Benchmark.rte`, `AbortScreen.bmp`, `LogConsole.txt`, `LogLoading.txt`, `LogLoadingWarning.txt`, `MemCleanupInfo.txt`, `allegro.log`
-	
+1. Place all game data and binaries into the `Data` folder.  
+	- Only the relevant files/folders will be copied so it's not necessary to clean up any folders, logs or binaries manually.
+
 2. Open `CCInstall.iss` using **Inno Setup 6**.
 
 3. Update `AppVersion` (line 2) if necessary.

@@ -76,24 +76,33 @@ Source: "{#SourcePath}\Data\*";							\
 DestDir: "{app}";										\
 Flags: ignoreversion recursesubdirs createallsubdirs;	\
 Excludes: 	"Place all game data and binaries here,		\
-			.gitignore,									\
-			.github,									\
 			ScreenShots,								\
 			Userdata,									\
 			Mods,										\
 			AbortScreen.bmp,							\
-			AbortLog.txt,								\
-			LogConsole.txt,								\
-			LogLoading.txt,								\
-			LogLoadingWarning.txt,						\
-			MemCleanupInfo.txt,							\
-			allegro.log,								\
+			.*,											\
+			*.exe,										\
 			*.bat,										\
-			Cortex Command.debug.full.exe,				\
-			Cortex Command.debug.minimal.exe,			\
-			Cortex Command.debug.release.exe,			\
-			fmodL.dll,									\
-			SDL2-32.dll";
+			*.dll,										\
+			*.md,										\
+			*.txt,										\
+			*.log";
+
+Source: "{#SourcePath}\Data\Cortex Command.exe";	\
+DestDir: "{app}";									\
+Flags: ignoreversion;
+
+Source: "{#SourcePath}\Data\Data\Base.rte\gamecontrollerdb.txt";	\
+DestDir: "{app}\Data\Base.rte";										\
+Flags: ignoreversion;
+
+Source: "{#SourcePath}\Data\SDL2.dll";		\
+DestDir: "{app}";							\
+Flags: ignoreversion;
+
+Source: "{#SourcePath}\Data\fmod.dll";	\
+DestDir: "{app}";						\
+Flags: ignoreversion;
 
 Source: "{#SourcePath}\Dependencies\VC_redist.x64.exe";		\
 DestDir: "{tmp}";											\
