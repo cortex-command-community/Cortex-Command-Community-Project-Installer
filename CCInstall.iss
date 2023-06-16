@@ -34,7 +34,7 @@ InfoAfterFile = {#SourcePath}\InfoPostInstall.txt
 
 ;Remove the following line to run in administrative install mode (install for all users.)
 PrivilegesRequired = lowest
-PrivilegesRequiredOverridesAllowed = dialog
+PrivilegesRequiredOverridesAllowed = commandline
 
 ;////////////////////////////////////////////////////////////////////////////////////////////////
 
