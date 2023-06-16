@@ -1,5 +1,5 @@
 ;Don't forget to bump version number
-#define AppVersion "PreRelease 4.0"
+#define AppVersion "PreRelease 5.0"
 
 #define AppName "Cortex Command Community Project"
 #define AppPublisher "Cortex Command Community"
@@ -54,8 +54,8 @@ Name: dependencies;					\
 Description: Install dependencies;	\
 Types: full;
 
-Name: dependencies/vcredist;						\
-Description: Install Visual C++ Redistributable;	\
+Name: dependencies/vcredist;							\
+Description: Install Visual C++ 2022 Redistributable;	\
 Types: full compact;
 
 ;////////////////////////////////////////////////////////////////////////////////////////////////
